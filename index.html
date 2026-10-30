@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CogniSync AI | Turn Long Meetings into Clear Action</title>
+  <meta name="description"
+    content="AI Meeting Summarizer automatically converting long meetings into executive summaries, key points, verified decisions, and assigned action items with deadlines.">
+
+  <!-- Google Fonts: Plus Jakarta Sans (Headings) & Inter (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Ambient Animated Background -->
+  <div class="ambient-bg" aria-hidden="true">
+    <div class="ambient-grid"></div>
+    <div class="blob blob-orange"></div>
+    <div class="blob blob-blue"></div>
+    <div class="blob blob-amber"></div>
+  </div>
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- Sticky Glass Navigation -->
+  <header class="site-nav" id="topNav">
+    <div class="app-container">
+      <nav class="nav-wrapper" aria-label="Main Navigation">
+        <a href="#hero" class="brand-logo" id="navBrandLogo">
+          <span class="logo-badge">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+              <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+              <line x1="12" y1="19" x2="12" y2="22"></line>
+              <line x1="8" y1="22" x2="16" y2="22"></line>
+            </svg>
+          </span>
+          <span class="logo-text">CogniSync <span class="text-gradient">AI</span></span>
+          <span class="logo-tag">Enterprise SaaS</span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#challenge" id="navLinkChallenge">The Challenge</a></li>
+          <li><a href="#howItWorks" id="navLinkHow">Workflow</a></li>
+          <li><a href="#workspace" id="navLinkWorkspace">AI Engine</a></li>
+          <li><a href="#comparison" id="navLinkComparison">Impact Analysis</a></li>
+          <li><a href="#designThinking" id="navLinkDesignThinking">Design Thinking</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="#workspace" class="btn btn-primary btn-sm" id="navCtaSummarize">
+            <span>Summarize Meeting</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- =======================================================================
+         1. HERO SECTION
+         ======================================================================= -->
+    <section class="hero-section" id="hero">
+      <div class="app-container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-pill">
+              <span class="hero-pill-dot"></span>
+              <span>Next-Gen Meeting Intelligence V2.4</span>
+            </div>
+
+            <h1 class="hero-title">
+              Turn long meetings into <span class="text-gradient">clear action.</span>
+            </h1>
+
+            <p class="hero-subtitle">
+              Automatically convert chaotic 90-minute discussions and audio streams into executive summaries,
+              high-conviction decisions, and accountable action items in seconds.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#workspace" class="btn btn-primary" id="heroCtaPrimary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <span>Summarize a Meeting</span>
+              </a>
+
+              <a href="#howItWorks" class="btn btn-secondary" id="heroCtaSecondary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                </svg>
+                <span>Explore Workflow</span>
+              </a>
+            </div>
+
+            <!-- Faint animated audio waveform line across hero -->
+            <div class="hero-waveform-bar" aria-hidden="true" title="Live audio stream activity">
+              <div class="waveform-bar" style="height: 40%"></div>
+              <div class="waveform-bar" style="height: 75%"></div>
+              <div class="waveform-bar" style="height: 30%"></div>
+              <div class="waveform-bar" style="height: 85%"></div>
+              <div class="waveform-bar" style="height: 50%"></div>
+              <div class="waveform-bar" style="height: 95%"></div>
+              <div class="waveform-bar" style="height: 60%"></div>
+              <div class="waveform-bar" style="height: 80%"></div>
+              <div class="waveform-bar" style="height: 45%"></div>
+              <div class="waveform-bar" style="height: 90%"></div>
+              <div class="waveform-bar" style="height: 65%"></div>
+              <div class="waveform-bar" style="height: 85%"></div>
+              <div class="waveform-bar" style="height: 40%"></div>
+              <div class="waveform-bar" style="height: 95%"></div>
+              <div class="waveform-bar" style="height: 55%"></div>
+              <div class="waveform-bar" style="height: 70%"></div>
+              <div class="waveform-bar" style="height: 35%"></div>
+              <div class="waveform-bar" style="height: 90%"></div>
+              <div class="waveform-bar" style="height: 50%"></div>
+              <div class="waveform-bar" style="height: 80%"></div>
+              <div class="waveform-bar" style="height: 60%"></div>
+              <div class="waveform-bar" style="height: 88%"></div>
+            </div>
+
+            <div class="hero-meta">
+              <div class="meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <span>Zero Server Round-Trip</span>
+              </div>
+              <div class="meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+                <span>Enterprise Privacy Ready</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Transformation Mock Interactive Card -->
+          <div class="hero-mock-container">
+            <div class="mock-card">
+              <div class="mock-card-glow"></div>
+
+              <div class="mock-header">
+                <div class="mock-window-controls">
+                  <span class="mock-dot"></span>
+                  <span class="mock-dot"></span>
+                  <span class="mock-dot"></span>
+                </div>
+                <div class="mock-status-pill">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 14 14"></polyline>
+                  </svg>
+                  <span>Real-Time Synthesis</span>
+                </div>
+              </div>
+
+              <div class="mock-flow">
+                <!-- Transformation bar -->
+                <div class="mock-transformation">
+                  <div class="mock-trans-left">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    <span>90:00 Raw Audio Transcript</span>
+                  </div>
+                  <div class="mock-trans-arrow">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </div>
+                  <div class="mock-trans-right">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                    </svg>
+                    <span>Structured Intelligence</span>
+                  </div>
+                </div>
+
+                <!-- Preview Chips -->
+                <div class="mock-preview-items">
+                  <div class="mock-chip">
+                    <div class="mock-chip-icon icon-decisions">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </div>
+                    <div class="mock-chip-content">
+                      <div class="mock-chip-title">Verified Decision</div>
+                      <div class="mock-chip-desc">Approved AWS us-west-2 GPU node migration to resolve 840ms latency
+                        spikes.</div>
+                    </div>
+                  </div>
+
+                  <div class="mock-chip">
+                    <div class="mock-chip-icon icon-actions">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <polyline points="16 11 18 13 22 9"></polyline>
+                      </svg>
+                    </div>
+                    <div class="mock-chip-content">
+                      <div class="mock-chip-title">Action Item Assigned</div>
+                      <div class="mock-chip-desc">Elena: Deliver WCAG-compliant design tokens & Figma specs by Monday,
+                        Oct 31st.</div>
+                    </div>
+                  </div>
+
+                  <div class="mock-chip">
+                    <div class="mock-chip-icon icon-points">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                      </svg>
+                    </div>
+                    <div class="mock-chip-content">
+                      <div class="mock-chip-title">Key Strategic Point</div>
+                      <div class="mock-chip-desc">iOS companion app releases Nov 15; Android phase 2 slated for January
+                        10.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         2. THE CHALLENGE STRIP
+         ======================================================================= -->
+    <section class="challenge-section" id="challenge">
+      <div class="app-container">
+        <div class="section-label">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="8" x2="12" y2="12"></line>
+            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+          </svg>
+          <span>The Problem Context</span>
+        </div>
+        <h2 class="section-title">The High Cost of Unstructured Meetings</h2>
+        <p class="section-subtitle">
+          Modern teams spend hours in synchronized dialogue, yet critical alignment disintegrates immediately after the
+          call disconnects.
+        </p>
+
+        <div class="challenge-grid">
+          <!-- Pain Point 1 -->
+          <div class="challenge-card">
+            <span class="challenge-stat-badge">60% Unproductive Time</span>
+            <div class="challenge-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="6" x2="12" y2="12"></line>
+                <line x1="12" y1="12" x2="16" y2="10"></line>
+              </svg>
+            </div>
+            <h3>Difficulty Recalling Decisions</h3>
+            <p>
+              Vital consensus, architectural choices, and budget commitments get buried within hundreds of
+              conversational side-threads without any single source of truth.
+            </p>
+            <!-- Citation note placeholder for academic evaluation -->
+            <div class="citation-note">
+              Source: Harvard Business Review & Doodle State of Meetings Report
+            </div>
+          </div>
+
+          <!-- Pain Point 2 -->
+          <div class="challenge-card">
+            <span class="challenge-stat-badge">43% Missed Action Items</span>
+            <div class="challenge-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z">
+                </path>
+                <line x1="12" y1="9" x2="12" y2="13"></line>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+              </svg>
+            </div>
+            <h3>Missed Action Items & Owners</h3>
+            <p>
+              Verbal commitments like "I'll handle that by Friday" fall through the cracks because ownership, urgency,
+              and deadlines are rarely tracked systematically.
+            </p>
+            <div class="citation-note">
+              Source: McKinsey Global Institute on Workplace Overhead
+            </div>
+          </div>
+
+          <!-- Pain Point 3 -->
+          <div class="challenge-card">
+            <span class="challenge-stat-badge">5.4 Hrs/Wk Lost</span>
+            <div class="challenge-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+            <h3>Time Wasted on Note-Taking</h3>
+            <p>
+              Team leads spend cognitive energy transcribing notes during meetings instead of actively problem-solving,
+              followed by tedious manual post-meeting drafting.
+            </p>
+            <div class="citation-note">
+              Source: MIT Sloan Management Review on Collaborative Drag
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         3. HOW IT WORKS (4-STEP STEPPER)
+         ======================================================================= -->
+    <section class="how-section" id="howItWorks">
+      <div class="app-container">
+        <div class="section-label">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+          </svg>
+          <span>End-To-End Architecture</span>
+        </div>
+        <h2 class="section-title">How CogniSync Transforms Speech to Action</h2>
+        <p class="section-subtitle">
+          An automated 4-stage pipeline that parses dialogue tokens, resolves speaker context, and extracts
+          high-fidelity commitments.
+        </p>
+
+        <div class="stepper-grid">
+          <!-- Step 1 -->
+          <div class="step-card">
+            <div class="step-num-badge">01</div>
+            <h4>Converts Speech to Text</h4>
+            <p>
+              Ingests raw text or captures audio streams directly via browser Web Speech API, isolating speaker channels
+              and timestamps.
+            </p>
+            <span class="step-tag">Acoustic & Diarization Stream</span>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step-card">
+            <div class="step-num-badge">02</div>
+            <h4>Understands & Identifies</h4>
+            <p>
+              Applies linguistic tokenization, removing conversational filler while scoring keyword density (TF) and
+              semantic impact.
+            </p>
+            <span class="step-tag">NLP Keyword & Topic Matrix</span>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step-card">
+            <div class="step-num-badge">03</div>
+            <h4>Finds & Assigns Actions</h4>
+            <p>
+              Identifies syntactic commitment patterns, maps deliverables to distinct owners, and extracts firm delivery
+              deadlines.
+            </p>
+            <span class="step-tag">Action Extraction Heuristics</span>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="step-card">
+            <div class="step-num-badge">04</div>
+            <h4>Summarizes & Formats</h4>
+            <p>
+              Compiles an executive briefing, decision log, checkable action items, and speaker participation metrics
+              ready for export.
+            </p>
+            <span class="step-tag">Executive Synthesis Engine</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         4. WORKSPACE (THE CORE TOOL)
+         ======================================================================= -->
+    <section class="workspace-section" id="workspace">
+      <div class="app-container">
+        <div class="workspace-header">
+          <div>
+            <div class="section-label">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+              <span>Interactive Workspace</span>
+            </div>
+            <h2 class="section-title">AI Summarization Engine</h2>
+          </div>
+
+          <div class="engine-status-badge">
+            <span class="engine-status-dot"></span>
+            <span>Local NLP Engine Active &middot; Offline Ready</span>
+          </div>
+        </div>
+
+        <div class="workspace-grid">
+          <!-- LEFT PANEL: INPUT -->
+          <div class="workspace-panel input-panel">
+            <div class="panel-header">
+              <div class="panel-title-group">
+                <span class="panel-title">Meeting Source</span>
+              </div>
+
+              <!-- Input Mode Tabs -->
+              <div class="input-tabs" role="tablist">
+                <button type="button" class="tab-btn active" data-tab="paste" id="tabPaste" role="tab"
+                  aria-selected="true">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                    <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                  </svg>
+                  <span>Paste Transcript</span>
+                </button>
+
+                <button type="button" class="tab-btn" data-tab="upload" id="tabUpload" role="tab" aria-selected="false">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="17 8 12 3 7 8"></polyline>
+                    <line x1="12" y1="3" x2="12" y2="15"></line>
+                  </svg>
+                  <span>Upload .txt</span>
+                </button>
+
+                <button type="button" class="tab-btn" data-tab="record" id="tabRecord" role="tab" aria-selected="false">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                    <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                    <line x1="12" y1="19" x2="12" y2="23"></line>
+                    <line x1="8" y1="23" x2="16" y2="23"></line>
+                  </svg>
+                  <span>Live Record</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="panel-body">
+              <!-- View 1: Paste Textarea -->
+              <div class="input-view active" id="viewPaste">
+                <textarea class="transcript-textarea" id="transcriptTextarea"
+                  placeholder="Paste your meeting transcript here in 'Speaker: sentence' format...&#10;&#10;Or click 'Load sample 90-minute meeting' below to test the engine with realistic enterprise dialogue."
+                  aria-label="Meeting Transcript Input"></textarea>
+              </div>
+
+              <!-- View 2: File Upload -->
+              <div class="input-view" id="viewUpload">
+                <div class="file-dropzone" id="fileDropzone" tabindex="0" role="button"
+                  aria-label="Drop plain text file here">
+                  <input type="file" id="txtFileInput" accept=".txt,text/plain" style="display: none;">
+                  <div class="dropzone-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                      <polyline points="14 2 14 8 20 8"></polyline>
+                      <line x1="12" y1="18" x2="12" y2="12"></line>
+                      <line x1="9" y1="15" x2="12" y2="12"></line>
+                      <line x1="15" y1="15" x2="12" y2="12"></line>
+                    </svg>
+                  </div>
+                  <h4 style="font-size: 1.05rem; margin-bottom: 6px;">Choose a .txt transcript file</h4>
+                  <p style="color: var(--text-secondary); font-size: 0.85rem; max-width: 300px;">
+                    Drag and drop your raw exported transcript text file here, or click to browse.
+                  </p>
+                </div>
+              </div>
+
+              <!-- View 3: Live Audio Recording (Web Speech API) -->
+              <div class="input-view" id="viewRecord">
+                <div class="live-record-box">
+                  <button type="button" class="record-mic-btn" id="recordMicBtn" aria-label="Toggle Live Recording">
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                      <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                      <line x1="12" y1="19" x2="12" y2="23"></line>
+                      <line x1="8" y1="23" x2="16" y2="23"></line>
+                    </svg>
+                  </button>
+                  <p id="recordStatusText" style="font-size: 0.9rem; color: var(--text-secondary); max-width: 320px;">
+                    Click microphone to start recording live meeting audio via Web Speech API.
+                  </p>
+                  <div class="live-transcript-feed" id="liveTranscriptFeed" aria-live="polite">
+                    Real-time speech stream will appear here...
+                  </div>
+                </div>
+              </div>
+
+              <!-- Live Meta Stats Bar -->
+              <div class="input-meta-bar">
+                <div class="meta-stats-group">
+                  <span class="meta-stat-pill" title="Live Word Count">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M4 7V4h16v3"></path>
+                      <line x1="12" y1="4" x2="12" y2="20"></line>
+                      <line x1="9" y1="20" x2="15" y2="20"></line>
+                    </svg>
+                    <strong id="liveWordCount" style="color: var(--text-primary);">0 words</strong>
+                  </span>
+                  <span>&bull;</span>
+                  <span class="meta-stat-pill" title="Estimated Meeting Duration">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    <span id="estimatedDuration">0 min</span>
+                  </span>
+                </div>
+
+                <button type="button" class="btn btn-outline btn-sm" id="loadSampleBtn">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  <span>Load Sample 90-min Meeting</span>
+                </button>
+              </div>
+
+              <!-- Primary Action CTA -->
+              <div class="input-actions-bar">
+                <button type="button" class="btn btn-outline btn-sm" id="clearWorkspaceBtn">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="3 6 5 6 21 6"></polyline>
+                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                  </svg>
+                  <span>Clear Input</span>
+                </button>
+
+                <button type="button" class="btn btn-primary" id="generateSummaryBtn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                  </svg>
+                  <span>Generate Summary</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT PANEL: OUTPUT -->
+          <div class="workspace-panel output-panel">
+            <div class="panel-header">
+              <div class="panel-title-group">
+                <span class="panel-title">Summary & Action Intelligence</span>
+              </div>
+              <span style="font-size: 0.78rem; color: var(--text-muted); font-family: var(--font-mono);">CogniSync V2.4
+                Engine</span>
+            </div>
+
+            <div class="panel-body">
+              <!-- STATE A: EMPTY STATE -->
+              <div class="output-empty-state" id="outputEmptyState">
+                <div class="empty-icon-wrap">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                  </svg>
+                </div>
+                <h3 style="font-size: 1.15rem; margin-bottom: 6px;">Ready for Synthesis</h3>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; max-width: 320px;">
+                  Paste a meeting transcript or load the sample 90-minute meeting on the left, then click
+                  <strong>Generate Summary</strong>.
+                </p>
+              </div>
+
+              <!-- STATE B: 4-STEP PROCESSING ANIMATION -->
+              <div class="processing-view" id="outputProcessingView">
+                <div class="processing-waveform" aria-hidden="true">
+                  <div class="proc-bar"></div>
+                  <div class="proc-bar"></div>
+                  <div class="proc-bar"></div>
+                  <div class="proc-bar"></div>
+                  <div class="proc-bar"></div>
+                  <div class="proc-bar"></div>
+                  <div class="proc-bar"></div>
+                  <div class="proc-bar"></div>
+                </div>
+
+                <h3 style="font-size: 1.2rem; margin-bottom: 4px;">AI Summarization Engine Processing...</h3>
+                <p style="color: var(--text-secondary); font-size: 0.86rem; margin-bottom: 16px;">
+                  Executing local linguistic diarization and commitment extraction
+                </p>
+
+                <div class="processing-progress-steps">
+                  <div class="proc-step-item active" id="procStep1">
+                    <span class="proc-step-circle">1</span>
+                    <span>Converting speech & tokens into semantic chunks...</span>
+                  </div>
+                  <div class="proc-step-item" id="procStep2">
+                    <span class="proc-step-circle">2</span>
+                    <span>Diarizing speakers & identifying topic clusters...</span>
+                  </div>
+                  <div class="proc-step-item" id="procStep3">
+                    <span class="proc-step-circle">3</span>
+                    <span>Extracting commitments, deadlines & key decisions...</span>
+                  </div>
+                  <div class="proc-step-item" id="procStep4">
+                    <span class="proc-step-circle">4</span>
+                    <span>Synthesizing executive summary & action matrix...</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- STATE C: POPULATED RESULTS -->
+              <div class="summary-results-view" id="outputResultsView">
+                <!-- Toolbar Actions -->
+                <div class="output-actions-toolbar">
+                  <div class="export-group">
+                    <button type="button" class="btn btn-secondary btn-sm" id="copySummaryBtn"
+                      title="Copy formatted Markdown to clipboard">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                      </svg>
+                      <span>Copy Summary</span>
+                    </button>
+
+                    <button type="button" class="btn btn-secondary btn-sm" id="downloadMdBtn"
+                      title="Download Markdown Document">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                      </svg>
+                      <span>Download .md</span>
+                    </button>
+
+                    <button type="button" class="btn btn-secondary btn-sm" id="downloadTxtBtn"
+                      title="Download Plain Text Document">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="12" y1="18" x2="12" y2="12"></line>
+                      </svg>
+                      <span>Download .txt</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Metrics Row (Count-up numbers) -->
+                <div class="summary-stats-grid">
+                  <div class="stat-box">
+                    <span class="stat-num" id="statOriginalWords">0</span>
+                    <span class="stat-label">Source Words</span>
+                  </div>
+                  <div class="stat-box">
+                    <span class="stat-num stat-accent" id="statCompression">0%</span>
+                    <span class="stat-label">Time & Space Saved</span>
+                  </div>
+                  <div class="stat-box">
+                    <span class="stat-num" id="statDecisionsCount" style="color: var(--success);">0</span>
+                    <span class="stat-label">Agreed Decisions</span>
+                  </div>
+                  <div class="stat-box">
+                    <span class="stat-num" id="statActionsCount" style="color: var(--accent-primary-light);">0</span>
+                    <span class="stat-label">Action Items</span>
+                  </div>
+                </div>
+
+                <!-- 1. Executive Summary -->
+                <div class="exec-summary-card">
+                  <div class="card-heading">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)"
+                      stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="12" y1="16" x2="12" y2="12"></line>
+                      <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                    <span>Executive Summary</span>
+                  </div>
+                  <p id="execSummaryText">Synthesizing executive brief...</p>
+                </div>
+
+                <!-- 2. Key Points -->
+                <div class="key-points-section">
+                  <div class="card-heading">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--info)" stroke-width="2.5"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                      </polygon>
+                    </svg>
+                    <span>Key Discussion Points</span>
+                  </div>
+                  <ul class="points-list" id="keyPointsList"></ul>
+                </div>
+
+                <!-- 3. Decisions -->
+                <div class="decisions-section">
+                  <div class="card-heading">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--success)"
+                      stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    <span>Ratified Decisions</span>
+                  </div>
+                  <div class="decisions-grid" id="decisionsList"></div>
+                </div>
+
+                <!-- 4. Action Items Table with Filter by Owner -->
+                <div class="action-items-section">
+                  <div class="action-items-header">
+                    <div class="card-heading" style="margin-bottom: 0;">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary-light)"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 11 12 14 22 4"></polyline>
+                        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                      </svg>
+                      <span>Action Items & Commitments</span>
+                    </div>
+
+                    <!-- Filter pills -->
+                    <div class="action-filter-bar" id="actionOwnerFilters"></div>
+                  </div>
+
+                  <div class="action-table-wrap">
+                    <table class="action-table" aria-label="Action Items Table">
+                      <thead>
+                        <tr>
+                          <th style="width: 40px; text-align: center;">Done</th>
+                          <th>Task Commitment</th>
+                          <th>Owner</th>
+                          <th>Due Date</th>
+                          <th>Priority</th>
+                        </tr>
+                      </thead>
+                      <tbody id="actionItemsTableBody"></tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <!-- 5. Speaker Contribution Mini Bar Chart -->
+                <div class="speaker-chart-section">
+                  <div class="card-heading" style="font-size: 0.88rem; color: var(--text-secondary);">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="18" y1="20" x2="18" y2="10"></line>
+                      <line x1="12" y1="20" x2="12" y2="4"></line>
+                      <line x1="6" y1="20" x2="6" y2="14"></line>
+                    </svg>
+                    <span>Speaker Word Contribution</span>
+                  </div>
+                  <div class="speaker-bars-container" id="speakerBarsContainer"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         5. BEFORE VS AFTER COMPARISON
+         ======================================================================= -->
+    <section class="comparison-section" id="comparison">
+      <div class="app-container">
+        <div class="section-label">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 3 21 3 21 8"></polyline>
+            <line x1="4" y1="20" x2="21" y2="3"></line>
+            <polyline points="21 16 21 21 16 21"></polyline>
+            <line x1="15" y1="15" x2="21" y2="21"></line>
+            <line x1="4" y1="4" x2="9" y2="9"></line>
+          </svg>
+          <span>Impact Evaluation</span>
+        </div>
+        <h2 class="section-title">Manual Meeting Notes vs. CogniSync AI</h2>
+        <p class="section-subtitle">
+          See the tangible operational contrast between unstructured ad-hoc scribbles and verified AI-distilled action
+          intelligence.
+        </p>
+
+        <div class="comparison-split-card">
+          <!-- Column 1: Manual Notes -->
+          <div class="comp-column comp-manual">
+            <span class="comp-badge">Manual Note-Taking (Status Quo)</span>
+            <h3 style="font-size: 1.25rem;">Fragmented & Subjective</h3>
+            <ul class="comp-list">
+              <li class="comp-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+                <span><strong>Long & unstructured:</strong> Wall-of-text notes where crucial points are buried under
+                  conversational tangent banter.</span>
+              </li>
+              <li class="comp-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+                <span><strong>Inconsistent formatting:</strong> Note quality depends heavily on who was typing; varying
+                  levels of detail and acronym confusion.</span>
+              </li>
+              <li class="comp-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+                <span><strong>Decisions hard to locate:</strong> Requires 15+ minutes of manual scanning to confirm
+                  whether a proposal was actually approved.</span>
+              </li>
+              <li class="comp-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+                <span><strong>Missed deliverables:</strong> Action items lacking explicit tags or dates inevitably slip
+                  past sprint review deadlines.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 2: CogniSync AI -->
+          <div class="comp-column comp-ai">
+            <span class="comp-badge">CogniSync AI Intelligence</span>
+            <h3 style="font-size: 1.25rem;">Objective & Instantly Actionable</h3>
+            <ul class="comp-list">
+              <li class="comp-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span><strong>Concise executive synthesis:</strong> A 3-sentence high-level brief delivering 78%
+                  compression without loss of intent.</span>
+              </li>
+              <li class="comp-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span><strong>Standardized structure:</strong> Clean key points, verified decisions, and structured
+                  accountability tables every single time.</span>
+              </li>
+              <li class="comp-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span><strong>Clear consensus tags:</strong> Decisions isolated with distinct checkmarks and
+                  architectural rationale preserved.</span>
+              </li>
+              <li class="comp-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span><strong>Trackable ownership & dates:</strong> Explicitly assigns tasks to owners with priority
+                  badges, checkable status, and date filters.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         6. DESIGN THINKING SECTION ("HOW WE DESIGNED THIS")
+         ======================================================================= -->
+    <section class="dt-section" id="designThinking">
+      <div class="app-container">
+        <div class="section-label">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+          </svg>
+          <span>Human-Centered Methodology</span>
+        </div>
+        <h2 class="section-title">How We Designed This</h2>
+        <p class="section-subtitle">
+          A 5-phase Design Thinking exploration addressing collaborative fatigue, cognitive overload, and commitment
+          drift in modern cross-functional teams.
+        </p>
+
+        <!-- 5 Tabs Nav -->
+        <div class="dt-tabs-nav" role="tablist">
+          <button type="button" class="dt-tab-btn active" data-pane="empathize" role="tab" aria-selected="true">
+            <span>1. Empathize</span>
+          </button>
+          <button type="button" class="dt-tab-btn" data-pane="define" role="tab" aria-selected="false">
+            <span>2. Define</span>
+          </button>
+          <button type="button" class="dt-tab-btn" data-pane="ideate" role="tab" aria-selected="false">
+            <span>3. Ideate</span>
+          </button>
+          <button type="button" class="dt-tab-btn" data-pane="prototype" role="tab" aria-selected="false">
+            <span>4. Prototype</span>
+          </button>
+          <button type="button" class="dt-tab-btn" data-pane="test" role="tab" aria-selected="false">
+            <span>5. Test & Feedback</span>
+          </button>
+        </div>
+
+        <!-- 5 Content Panes -->
+        <div class="dt-content-container">
+          <!-- PANE 1: EMPATHIZE -->
+          <div class="dt-pane active" id="pane-empathize">
+            <div class="dt-card">
+              <div class="persona-grid">
+                <div class="persona-profile">
+                  <div class="persona-avatar">MC</div>
+                  <h3 style="font-size: 1.15rem; margin-bottom: 2px;">Maya Chen</h3>
+                  <p
+                    style="font-size: 0.82rem; color: var(--accent-primary-light); font-weight: 600; margin-bottom: 12px;">
+                    Lead Product Manager & Capstone Team Lead
+                  </p>
+                  <div style="font-size: 0.78rem; color: var(--text-muted); line-height: 1.4;">
+                    Runs 18-24 hours of sprint, design, and stakeholder meetings weekly across remote time zones.
+                  </div>
+                </div>
+
+                <div class="persona-details-grid">
+                  <div class="persona-col">
+                    <h4>Core User Goals</h4>
+                    <ul>
+                      <li>Keep cross-functional engineering, UX, and marketing teams aligned after marathon sprint
+                        reviews.</li>
+                      <li>Eliminate 45 minutes of manual post-meeting transcription every afternoon.</li>
+                      <li>Ensure zero dropped commitments or ambiguous task ownership.</li>
+                    </ul>
+                  </div>
+
+                  <div class="persona-col">
+                    <h4>Key Frustrations</h4>
+                    <ul>
+                      <li>"I cannot engage in strategic debates when forced to frantically type meeting minutes
+                        simultaneously."</li>
+                      <li>Teammates disagree on what was decided three days later because verbal consensus wasn't
+                        logged.</li>
+                      <li>Meeting recordings sit unwatched in cloud drives because nobody has 90 minutes to review.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                style="margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border-subtle); display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;">
+                <div style="background: var(--bg-dark-inset); padding: 14px; border-radius: 8px;">
+                  <strong
+                    style="color: var(--accent-secondary); font-size: 0.8rem; display: block; margin-bottom: 4px;">INSIGHT
+                    01</strong>
+                  <span style="font-size: 0.85rem; color: var(--text-secondary);">Users want clear synthesis over
+                    verbatim transcripts; bullet points must be actionable.</span>
+                </div>
+                <div style="background: var(--bg-dark-inset); padding: 14px; border-radius: 8px;">
+                  <strong
+                    style="color: var(--accent-secondary); font-size: 0.8rem; display: block; margin-bottom: 4px;">INSIGHT
+                    02</strong>
+                  <span style="font-size: 0.85rem; color: var(--text-secondary);">Assignee initials and due dates are 3x
+                    more impactful than generic summaries.</span>
+                </div>
+                <div style="background: var(--bg-dark-inset); padding: 14px; border-radius: 8px;">
+                  <strong
+                    style="color: var(--accent-secondary); font-size: 0.8rem; display: block; margin-bottom: 4px;">INSIGHT
+                    03</strong>
+                  <span style="font-size: 0.85rem; color: var(--text-secondary);">Zero-latency offline availability
+                    builds immediate trust without privacy friction.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PANE 2: DEFINE -->
+          <div class="dt-pane" id="pane-define">
+            <div class="dt-card">
+              <div class="problem-statement-box">
+                &ldquo;Cross-functional project leaders and distributed teams struggle to maintain execution velocity
+                because long, unstructured meetings bury critical decisions and verbal action items in conversational
+                clutter, causing missed deadlines and cognitive fatigue.&rdquo;
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 24px;">
+                <div
+                  style="background: var(--bg-dark-inset); padding: 20px; border-radius: 12px; border: 1px solid var(--border-subtle);">
+                  <h4 style="font-size: 1rem; color: var(--accent-primary-light); margin-bottom: 8px;">The Design
+                    Challenge</h4>
+                  <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+                    How can we extract the high-signal "signal" (decisions, tasks, dates) from low-signal conversational
+                    dialogue without imposing burdensome manual tagging workflows on participants during the call?
+                  </p>
+                </div>
+
+                <div
+                  style="background: var(--bg-dark-inset); padding: 20px; border-radius: 12px; border: 1px solid var(--border-subtle);">
+                  <h4 style="font-size: 1rem; color: var(--success); margin-bottom: 8px;">Success Metrics Defined</h4>
+                  <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+                    1. Over 75% reduction in meeting reading time.<br>
+                    2. 100% precision in capturing named owners and explicit dates.<br>
+                    3. Sub-second browser generation with zero cloud dependencies.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PANE 3: IDEATE -->
+          <div class="dt-pane" id="pane-ideate">
+            <div class="dt-card">
+              <h3 style="font-size: 1.25rem; margin-bottom: 16px;">How Might We (HMW) Explorations</h3>
+
+              <div class="hmw-grid">
+                <div class="hmw-card">
+                  <strong>HMW 01: Instant Decision Isolation</strong>
+                  How might we algorithmically isolate sentences representing firm consensus from speculative proposals
+                  without complex neural training?
+                </div>
+
+                <div class="hmw-card">
+                  <strong>HMW 02: Accountable Attribution</strong>
+                  How might we automatically map commitment verbs ("I will", "please deliver") to explicit team members
+                  and deadlines in one pass?
+                </div>
+
+                <div class="hmw-card">
+                  <strong>HMW 03: Seamless Handoff</strong>
+                  How might we export structured meeting outcomes directly into team productivity ecosystems (Markdown,
+                  tables, checklists)?
+                </div>
+              </div>
+
+              <div
+                style="background: rgba(249, 115, 22, 0.05); border: 1px solid var(--border-accent); padding: 20px; border-radius: 12px;">
+                <h4 style="font-size: 1rem; color: var(--accent-primary-light); margin-bottom: 6px;">Chosen Solution
+                  Architecture</h4>
+                <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+                  A hybrid local NLP pipeline coupling speaker diarization parsing, term-frequency heuristic scoring,
+                  regex-guided decision extraction, and date pattern recognition into an intuitive two-panel boardroom
+                  dashboard with exportable Markdown & checklist interactions.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- PANE 4: PROTOTYPE -->
+          <div class="dt-pane" id="pane-prototype">
+            <div class="dt-card">
+              <h3 style="font-size: 1.25rem; margin-bottom: 12px;">What This Working Prototype Demonstrates</h3>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 24px;">
+                This prototype proves the end-to-end viability of client-side meeting intelligence without external
+                server latency or privacy vulnerabilities.
+              </p>
+
+              <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+                <div
+                  style="background: var(--bg-dark-inset); padding: 18px; border-radius: 10px; border: 1px solid var(--border-subtle);">
+                  <h4 style="font-size: 0.95rem; color: var(--text-primary); margin-bottom: 6px;">1. Multi-Modal
+                    Transcript Ingestion</h4>
+                  <p style="font-size: 0.84rem; color: var(--text-secondary); line-height: 1.5;">
+                    Supports raw text pasting, drag-and-drop .txt file ingestion, and real-time audio capture via
+                    browser Web Speech API with graceful fallback.
+                  </p>
+                </div>
+
+                <div
+                  style="background: var(--bg-dark-inset); padding: 18px; border-radius: 10px; border: 1px solid var(--border-subtle);">
+                  <h4 style="font-size: 0.95rem; color: var(--text-primary); margin-bottom: 6px;">2. Local NLP
+                    Extraction Engine</h4>
+                  <p style="font-size: 0.84rem; color: var(--text-secondary); line-height: 1.5;">
+                    Runs client-side TF scoring, decision cue matching, and owner/deadline resolution with an
+                    architecturally marked <code>summarizeWithLLM()</code> hook.
+                  </p>
+                </div>
+
+                <div
+                  style="background: var(--bg-dark-inset); padding: 18px; border-radius: 10px; border: 1px solid var(--border-subtle);">
+                  <h4 style="font-size: 0.95rem; color: var(--text-primary); margin-bottom: 6px;">3. Interactive Action
+                    Item Matrix</h4>
+                  <p style="font-size: 0.84rem; color: var(--text-secondary); line-height: 1.5;">
+                    Provides checkable task states, dynamic owner filter pills (Priya, Marcus, Elena, David), priority
+                    badges, and visual initials.
+                  </p>
+                </div>
+
+                <div
+                  style="background: var(--bg-dark-inset); padding: 18px; border-radius: 10px; border: 1px solid var(--border-subtle);">
+                  <h4 style="font-size: 0.95rem; color: var(--text-primary); margin-bottom: 6px;">4. Boardroom SaaS
+                    Design System</h4>
+                  <p style="font-size: 0.84rem; color: var(--text-secondary); line-height: 1.5;">
+                    Engineered with dark obsidian hues, glowing blobs, glass cards, micro-waveform animations, and
+                    WCAG-compliant contrast.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PANE 5: TEST & FEEDBACK -->
+          <div class="dt-pane" id="pane-test">
+            <div class="dt-card">
+              <h3 style="font-size: 1.25rem; margin-bottom: 8px;">Design Thinking Usability Evaluation</h3>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 24px;">
+                Evaluate this prototype as part of our academic Design Thinking test phase. Responses are saved locally.
+              </p>
+
+              <div class="test-form-box" id="testFormContainer">
+                <label style="font-size: 0.86rem; font-weight: 600; color: var(--text-primary);">Overall Prototype
+                  Usability & Polish (1 to 5 Stars):</label>
+                <div class="star-rating" role="radiogroup" aria-label="Usability Rating">
+                  <button type="button" class="star-btn active" data-rating="1" aria-label="1 star">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                      <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                      </polygon>
+                    </svg>
+                  </button>
+                  <button type="button" class="star-btn active" data-rating="2" aria-label="2 stars">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                      <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                      </polygon>
+                    </svg>
+                  </button>
+                  <button type="button" class="star-btn active" data-rating="3" aria-label="3 stars">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                      <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                      </polygon>
+                    </svg>
+                  </button>
+                  <button type="button" class="star-btn active" data-rating="4" aria-label="4 stars">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                      <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                      </polygon>
+                    </svg>
+                  </button>
+                  <button type="button" class="star-btn active" data-rating="5" aria-label="5 stars">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                      <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                      </polygon>
+                    </svg>
+                  </button>
+                </div>
+
+                <label for="feedbackComment"
+                  style="font-size: 0.86rem; font-weight: 600; color: var(--text-primary); display: block; margin-bottom: 6px;">
+                  What would you improve or add to the next iteration?
+                </label>
+                <textarea class="feedback-textarea" id="feedbackComment"
+                  placeholder="Share your suggestions on action item triaging, summarization accuracy, or UX interactions..."></textarea>
+
+                <button type="button" class="btn btn-primary" id="submitFeedbackBtn">
+                  <span>Submit Evaluation</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Thank You State -->
+              <div class="thank-you-box" id="testThankYouState">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 8px;">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <h4 style="font-size: 1.15rem; margin-bottom: 4px;">Feedback Recorded in LocalStorage!</h4>
+                <p style="font-size: 0.88rem; color: #BBF7D0;">
+                  Thank you for contributing to our Design Thinking testing iteration. Your ratings help refine our AI
+                  extraction heuristics.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =======================================================================
+       7. FOOTER & ACADEMIC CREDITS
+       ======================================================================= -->
+  <footer class="site-footer">
+    <div class="app-container">
+      <div class="footer-top">
+        <div>
+          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+            <span class="logo-badge" style="width: 32px; height: 32px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+              </svg>
+            </span>
+            <span
+              style="font-family: var(--font-heading); font-weight: 800; font-size: 1.1rem; color: var(--text-primary);">
+              CogniSync AI
+            </span>
+          </div>
+          <p style="font-size: 0.84rem; color: var(--text-secondary); max-width: 400px; line-height: 1.5;">
+            Enterprise AI Meeting Summarizer designed and prototyped for high-fidelity Design Thinking capstone
+            evaluation.
+          </p>
+        </div>
+
+        <div class="academic-credits">
+          <span class="academic-badge">Academic Design Thinking Submission</span>
+          <div style="font-size: 0.84rem; color: var(--text-primary); font-weight: 600;" id="academicTeam">
+            CogniSync Labs / Team 07
+          </div>
+          <div style="font-size: 0.8rem; color: var(--text-muted);" id="academicCourse">
+            DES402: Design Thinking & Human-Centered AI
+          </div>
+          <div style="font-size: 0.8rem; color: var(--text-muted);" id="academicDept">
+            Department of Computer Science & Design Systems
+          </div>
+          <div style="font-size: 0.8rem; color: var(--text-muted);" id="academicInst">
+            College of Engineering & Technology
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 CogniSync AI. All prototype rights reserved.</div>
+        <div>Configured for standalone execution: double-click <code>index.html</code></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- Scripts: sample.js must load before app.js -->
+  <script src="sample.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
